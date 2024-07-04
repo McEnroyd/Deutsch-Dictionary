@@ -68,7 +68,6 @@ def add_new_word(option):
     except KeyError:
         print("Unknown command")
 
-
 def del_word(opt):
     try:
         ind1 = int(input("Enter number to delete: ")) - 1
