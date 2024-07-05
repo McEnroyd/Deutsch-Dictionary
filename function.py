@@ -68,6 +68,7 @@ def add_new_word(option):
     except KeyError:
         print("Unknown command")
 
+
 def del_word(opt):
     try:
         ind1 = int(input("Enter number to delete: ")) - 1
@@ -96,10 +97,11 @@ def del_word(opt):
 def quiz_print(w, random_index):
     user_answeringerman = input(f"{w['in_georgian']}: ")
     if w["in_german"] != user_answeringerman:
-        print(f"Incorrect, your answer: {user_answeringerman} / "
-              f"correct: {random_index + 1}.{w['in_german']}")
+        return [f"Incorrect, your answer: {user_answeringerman} / " 
+                f"correct: {random_index + 1}.{w['in_german']}", 0]
+
     else:
-        print("Correct!")
+        return ["Correct!", 1]
 
 
 def get_rand_word(lxcn):
