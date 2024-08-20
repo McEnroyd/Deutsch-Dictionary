@@ -37,14 +37,13 @@ while True:
                                     print(f"Correct! {passed}/{tested_words}")
                             elif wrd["form"] == "v":
                                 returned = function.quiz_print(wrd, random_index)
-                                passed += returned[1]
-                                print(f"{returned[0]} - {passed}/{tested_words}")
+                                passed += returned[0]
+                                print(f"{returned[1]} {passed}/{tested_words}")
                             elif wrd["form"] == "o":
                                 returned = function.quiz_print(wrd, random_index)
-                                passed += returned[1]
-                                print(f"{returned[0]} {passed}/{tested_words}")
+                                passed += returned[0]
+                                print(f"{returned[1]} {passed}/{tested_words}")
                         else:
-                            print("same")
                             continue
                     else:
                         print(f"Finished, Your score is {passed} from {tested_words}")

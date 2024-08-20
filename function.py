@@ -96,10 +96,12 @@ def del_word(opt):
 def quiz_print(w, random_index):
     user_answeringerman = input(f"{w['in_georgian']}: ")
     if w["in_german"] != user_answeringerman:
-        print(f"Incorrect, your answer: {user_answeringerman} / "
-              f"correct: {random_index + 1}.{w['in_german']}")
+        text = f"Incorrect, your answer: {user_answeringerman} / "\
+               f"correct: {random_index + 1}.{w['in_german']}"
+        return [0, text]
     else:
-        print("Correct!")
+        text = "Correct!"
+        return [1, text]
 
 
 def get_rand_word(lxcn):
